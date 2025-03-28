@@ -2,7 +2,7 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import AuthProvider from "@/components/auth-provider"
 import { ThemeProvider } from "@/components/theme-provider"
-
+import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <main className="flex min-h-screen items-center justify-center p-4">
               {children}
+              <Toaster richColors position="top-right" />
             </main>
           </AuthProvider>
         </ThemeProvider>
