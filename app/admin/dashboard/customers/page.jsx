@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Search, Plus, Edit, Trash, X } from "lucide-react";
-import { Toaster, toast } from "sonner"; // Import Sonner
+import { Toaster, toast } from "sonner"; 
 
 import { mockCustomers } from "@/lib/utils/data";
 
