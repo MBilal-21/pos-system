@@ -1,15 +1,4 @@
-// "use client"
-// // components/app-sidebar.tsx
-// import { Sidebar, SidebarContent } from "@/components/ui/sidebar"
 
-// export function AppSidebar() {
-//   return (
-//     <Sidebar>
-//       <SidebarContent />
-//     </Sidebar>
-//   )
-// }
-// components/app-sidebar.jsx
 'use client'
 
 import { Home, Settings, Search, Calendar, Inbox } from 'lucide-react'
@@ -24,6 +13,7 @@ import {
   SidebarMenuItem,
   SidebarRail
 } from "@/components/ui/sidebar"
+import Link from 'next/link'
 // import { SidebarTrigger } from "@/components/ui/sidebar"
 // Menu items
 const items = [
@@ -33,8 +23,8 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "/admin/dashboard/inbox",
+    title: "Products",
+    url: "/admin/dashboard/products",
     icon: Inbox,
   },
   {
@@ -43,8 +33,13 @@ const items = [
     icon: Calendar,
   },
   {
+    title: "pos",
+    url: "/admin/dashboard/pos",
+    icon: Calendar,
+  },
+  {
     title: "Search",
-    url: "/admin/dashboard/",
+    url: "/admin/dashboard/#",
     icon: Search,
   },
   {
@@ -65,10 +60,10 @@ export default function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

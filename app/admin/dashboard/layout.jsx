@@ -17,7 +17,7 @@ export default function Layout({ children }) {
 
             <AppSidebar />
 
-            <div>
+            <div className="w-full">
                 <SidebarTrigger />
                 {children}
             </div>
